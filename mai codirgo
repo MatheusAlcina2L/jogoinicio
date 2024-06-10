@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <title>Introdução ao Canvas com Java Script</title>
+    <meta charset="UTF-8">
+    <!-- Início do Java Script -->
+    <script>
+      function draw(){
+        var canvas = document.getElementById('meuCanvas');
+        if (canvas.getContext){
+          var cntxt = canvas.getContext('2d');
+         
+          var grad = cntxt
+          var gradinf
+          var gradR
+          var gradRinf
+
+
+
+
+
+        }}
+    </script>
+    <!-- Fim do Java Script -->
+      
+      
+  </head>
+  <body onload="draw();">
+    <canvas id="meuCanvas" style="border:1px solid #000000;"></canvas>
+  </body>
+</html>
