@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <title>Exemplo de desenho de formas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content= "width=divice-width, initial-scale=1.0">
+    <script>
+        function draw(){
+            var canvas = document.getelementbyId('meuCanvas');
+            if (canvas.getContext){
+                var cntxt = canvas.getContext('2d');
+    /***** textos *****/
+                cntxt.font="30px comic sans MS";
+                var textos = documentt.getelementbyId("meuTexto").value;
+                cntxt.fillStyle="red";
+                cntxt.textAlign= (center);
+                cntxt.strokeText(textos,cnvas.width/2, canvas.height/2);
+            }
+        }
+        </script>
+        </head>
+        <body>
+<input type="text" id="meutexto" auto focus>
+<button onclick="draw()">novotexto</button><br><br>
+<canvas id="meuCanvas" width="400" height="400" style="border:1px solid #000000;"><</canvas>
+
+
+
+
+        </body>
+        </html>

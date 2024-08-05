@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <title>Introdução ao Canvas com Java Script</title>
+    <meta charset="UTF-8">
+    <!-- Início do Java Script -->
+    <script>
+      function draw(){
+        var canvas = document.getElementById('meuCanvas');
+        if (canvas.getContext){
+          var cntxt = canvas.getContext('2d');
+         
+          var grad = cntxt.createLinearGradient(0, 0, 200, 0);
+          var gradinf=cntxt.createLinearGradient(0, 0, 200, 0);
+          var gradR=cntxt.createRadialGradient(200, 100, 95, 395, 100, 100);
+          var gradRinf=cntxt.createRadialGradient(300, 300, 15, 300, 300, 100);
+
+grad.addColorStop(0, "red");
+grad.addColorStop(1, "rgb(0,0,255)");
+
+gradinf.addColorStop(0, "rgb(120, 10, 10)");
+gradinf.addColorStop(0,5, "rgb(10, 120, 10)");
+gradinf.addColorStop(1,"rgb(10, 10, 120)");
+
+gradR.addColorStop(0, "green");
+gradR.addColorStop(1, "rgb (255, 0, 0)");
+
+gradRinf.addColorStop(0, "0000ff");
+gradRinf.addColorStop(0.25, "ffff00");
+gradRinf.addColorStop(0,50, "00ff00");
+gradRinf.addColorStop(0,75, "ff0000");
+gradRinf.addColorStop(1, "ffffff");
+
+cntxt.beginPath();
+cntxt.fillStyle=grad;
+cntxt.fillRect(5, 5, 195, 195);
+cntxt.stroke();
+cntxt.closePath();
+
+cntxt.beginPath
+cntxt.fillStyle=gradinf;
+cntxt.moveTo(10, 200)
+
+
+        }}
+    </script>
+    <!-- Fim do Java Script -->
+      
+      
+  </head>
+  <body onload="draw();">
+    <canvas id="meuCanvas" style="border:1px solid #000000;"></canvas>
+  </body>
+</html>
