@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<!-- Esta aula tem como objetivo apresentar um exemplo básico de uso das ferramentas de desenho no Canvas -->
+
+<html lang="pt-BR">
+<head>
+<title>BRASIL</title>
+<meta charset="UTF-8">
+
+<!-- Incício do Script do Canvas -->
+
+
+
+<script>
+
+function draw(){
+
+var canvas = document.getElementById('meuCanvas');
+
+if(canvas.getContext){
+
+var cntxt = canvas.getContext('2d');
+var x = 312.5;
+var y = 200.0;
+
+cntxt.beginPath();
+cntxt.fillStyle = "rgb(0, 241, 0)";
+cntxt.fillRect (30, 35, 550, 350);
+cntxt.closePath();
+
+
+cntxt.beginPath();
+cntxt.fillStyle = "rgb(233, 233, 0)";
+cntxt.moveTo(285, 340);
+cntxt.lineTo(160,205);
+cntxt.lineTo(285, 365);
+cntxt.lineTo(40, 205);
+cntxt.fill();
+cntxt.closePath();
+
+//Círculo
+cntxt.beginPath();
+cntxt.fillStyle = "rgb(0, 0, 222)";
+cntxt.arc(285, 205, 135, 0, 2*Math.PI);
+cntxt.fill();
+cntxt.closePath();
+
+
+cntxt.beginPath();
+cntxt.strokeStyle="blue";
+cntxt.fillStyle = "rgb(255, 255, 255)";
+cntxt.moveTo(157.5, 215);
+cntxt.quadraticCurveTo(290, 130, 415, 180);
+cntxt.lineTo(408, 170);
+cntxt.quadraticCurveTo(290, 115, 166, 215);
+cntxt.closePath();
+cntxt.fill();
+cntxt.stroke();
+}}
+</script>
+
+
+</head>
+
+<body onload="draw();">
+
+<canvas id="meuCanvas" width="700" height="600" style="border:1px solid #000000;"></canvas>
+
+</body>
+
+</html>
